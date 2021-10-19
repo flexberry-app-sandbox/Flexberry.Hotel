@@ -1,0 +1,15 @@
+﻿{
+  "newForm": null,
+  "editForm": null,
+  "external": false,
+  "caption": "Комнаты",
+  "name": "IISHotelRoomList",
+  "className": "RoomList",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-hotel-room",
+      "modelProjection": "RoomL"
+    }
+  ]
+}

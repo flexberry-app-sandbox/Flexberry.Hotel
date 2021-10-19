@@ -1,0 +1,93 @@
+<h3 class="ui header">{{t "forms.i-i-s-hotel-hotel-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.name
+      class=(if (v-get validationModel "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-hotel-hotel-e.name-caption")
+      data-test-i-i-s-hotel-hotel-e-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "name" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.address
+      class=(if (v-get validationModel "address" "isInvalid") "error")
+      label=(t "forms.i-i-s-hotel-hotel-e.address-caption")
+      data-test-i-i-s-hotel-hotel-e-address=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "address" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-hotel-hotel-e.manager-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.manager
+      displayAttributeName="firstName"
+      autocomplete=true
+      relationName="manager"
+      projection="EmployeeL"
+      title=(t "forms.i-i-s-hotel-hotel-e.manager-caption")
+      readonly=readonly
+      componentName="managerLookup"
+      class=(if (v-get validationModel "manager" "isInvalid") "error")
+      data-test-i-i-s-hotel-hotel-e-manager=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "manager" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-hotel-hotel-e.rooms-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="roomsGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.rooms
+      content=model.rooms
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "rooms" "isInvalid") "error")
+      data-test-i-i-s-hotel-hotel-e-rooms=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "rooms" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-hotel-hotel-e.employees-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="employeesGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.employees
+      content=model.employees
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "employees" "isInvalid") "error")
+      data-test-i-i-s-hotel-hotel-e-employees=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "employees" "message")}}
+  </div>
+</form>

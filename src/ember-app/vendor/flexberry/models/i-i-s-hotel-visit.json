@@ -1,0 +1,176 @@
+﻿{
+  "name": "IISHotelVisit",
+  "modelName": "i-i-s-hotel-visit",
+  "className": "Visit",
+  "nameSpace": "IIS.Hotel",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "startVisitDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "endVisitdate",
+      "type": "date",
+      "flexberryType": "NullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "person",
+      "relatedTo": "i-i-s-hotel-person",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "room",
+      "relatedTo": "i-i-s-hotel-room",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "VisitE",
+      "modelName": "i-i-s-hotel-visit",
+      "attrs": [
+        {
+          "name": "startVisitDate",
+          "caption": "Start visit date",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "endVisitdate",
+          "caption": "End visitdate",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "FullName",
+          "lookupValueField": "fullName",
+          "relationName": "Person",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "fullName",
+              "caption": "Full name",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Person",
+          "name": "person",
+          "relatedTo": "i-i-s-hotel-person",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Number",
+          "lookupValueField": "number",
+          "relationName": "Room",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "number",
+              "caption": "Number",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Room",
+          "name": "room",
+          "relatedTo": "i-i-s-hotel-room",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "VisitL",
+      "modelName": "i-i-s-hotel-visit",
+      "attrs": [
+        {
+          "name": "startVisitDate",
+          "caption": "Start visit date",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "endVisitdate",
+          "caption": "End visitdate",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Person",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "fullName",
+              "caption": "Full name",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Full name",
+          "name": "person",
+          "relatedTo": "i-i-s-hotel-person",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Room",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "number",
+              "caption": "Number",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Number",
+          "name": "room",
+          "relatedTo": "i-i-s-hotel-room",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

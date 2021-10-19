@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-hotel-visit-edit",
+  "editForm": "i-i-s-hotel-visit-edit",
+  "external": false,
+  "caption": "Visit",
+  "name": "IISHotelVisitL",
+  "className": "VisitL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-hotel-visit",
+      "modelProjection": "VisitL"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+﻿{
+  "name": "IISHotelHotelEmployee",
+  "modelName": "i-i-s-hotel-hotel-employee",
+  "className": "HotelEmployee",
+  "nameSpace": "IIS.Hotel",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "startWorkDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "endWorkDate",
+      "type": "date",
+      "flexberryType": "NullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "employee",
+      "relatedTo": "i-i-s-hotel-employee",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "hotel",
+      "relatedTo": "i-i-s-hotel-hotel",
+      "inverse": "employees"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "HotelEmployeeE",
+      "modelName": "i-i-s-hotel-hotel-employee",
+      "attrs": [
+        {
+          "name": "startWorkDate",
+          "caption": "Start work date",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "endWorkDate",
+          "caption": "End work date",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "FirstName",
+          "lookupValueField": "firstName",
+          "relationName": "Employee",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "firstName",
+              "caption": "First name",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Employee",
+          "name": "employee",
+          "relatedTo": "i-i-s-hotel-employee",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

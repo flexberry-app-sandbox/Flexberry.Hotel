@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISHotelPerson",
+  "modelName": "i-i-s-hotel-person",
+  "className": "Person",
+  "nameSpace": "IIS.Hotel",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "fullName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "sex",
+      "type": "i-i-s-hotel-sex",
+      "flexberryType": "Sex",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PersonE",
+      "modelName": "i-i-s-hotel-person",
+      "attrs": [
+        {
+          "name": "fullName",
+          "caption": "Full name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "PersonL",
+      "modelName": "i-i-s-hotel-person",
+      "attrs": [
+        {
+          "name": "fullName",
+          "caption": "Full name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

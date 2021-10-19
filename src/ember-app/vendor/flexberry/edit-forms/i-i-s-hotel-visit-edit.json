@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Person",
+      "projection": "PersonL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Room",
+      "projection": "RoomL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Визит",
+  "name": "IISHotelVisitEdit",
+  "className": "VisitEdit",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-hotel-visit",
+      "modelProjection": "VisitE"
+    }
+  ]
+}

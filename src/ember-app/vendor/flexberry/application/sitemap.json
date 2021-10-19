@@ -1,0 +1,43 @@
+﻿{
+  "applicationCaption": "HotelApp",
+  "applicationTitle": "",
+  "items": [
+    {
+      "link": null,
+      "menuName": "desktop",
+      "caption": "Desktop",
+      "title": "Desktop",
+      "children": [
+        {
+          "link": "i-i-s-hotel-employee-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "Employee",
+          "children": null
+        },
+        {
+          "link": "i-i-s-hotel-visit-l",
+          "menuName": null,
+          "caption": "Визиты",
+          "title": "Visit",
+          "children": null
+        },
+        {
+          "link": "i-i-s-hotel-hotel-l",
+          "menuName": null,
+          "caption": "Отели",
+          "title": "Hotel",
+          "children": null
+        },
+        {
+          "link": "i-i-s-hotel-person-l",
+          "menuName": null,
+          "caption": "Гости",
+          "title": "Person",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

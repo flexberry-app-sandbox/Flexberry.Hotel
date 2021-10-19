@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Manager",
+      "projection": "EmployeeL",
+      "detailModelName": null
+    },
+    {
+      "master": "employee",
+      "displayAttributeName": "firstName",
+      "required": true,
+      "relationName": "Employees.Employee",
+      "projection": "EmployeeL",
+      "detailModelName": "i-i-s-hotel-hotel-employee"
+    }
+  ],
+  "external": false,
+  "caption": "Hotel",
+  "name": "IISHotelHotelE",
+  "className": "HotelE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-hotel-hotel",
+      "modelProjection": "HotelE"
+    }
+  ]
+}

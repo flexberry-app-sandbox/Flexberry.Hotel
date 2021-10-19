@@ -1,0 +1,117 @@
+﻿{
+  "name": "IISHotelEmployee",
+  "modelName": "i-i-s-hotel-employee",
+  "className": "Employee",
+  "nameSpace": "IIS.Hotel",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "firstName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "sex",
+      "type": "i-i-s-hotel-sex",
+      "flexberryType": "Sex",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "EmployeeE",
+      "modelName": "i-i-s-hotel-employee",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "EmployeeL",
+      "modelName": "i-i-s-hotel-employee",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

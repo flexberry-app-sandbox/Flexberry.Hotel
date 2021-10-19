@@ -1,0 +1,84 @@
+﻿{
+  "name": "IISHotelRoom",
+  "modelName": "i-i-s-hotel-room",
+  "className": "Room",
+  "nameSpace": "IIS.Hotel",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "number",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "hotel",
+      "relatedTo": "i-i-s-hotel-hotel",
+      "inverse": "rooms"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "RoomE",
+      "modelName": "i-i-s-hotel-room",
+      "attrs": [
+        {
+          "name": "number",
+          "caption": "Number",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "RoomL",
+      "modelName": "i-i-s-hotel-room",
+      "attrs": [
+        {
+          "name": "number",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Hotel",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Отель",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Отель",
+          "name": "hotel",
+          "relatedTo": "i-i-s-hotel-hotel",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
