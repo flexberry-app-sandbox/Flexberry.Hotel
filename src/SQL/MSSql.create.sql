@@ -62,7 +62,7 @@ CREATE TABLE [Person] (
 
 	 [FullName] VARCHAR(255)  NULL,
 
-	 [Sex] VARCHAR(7)  NULL,
+	 [Sex] VARCHAR(6)  NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
@@ -77,7 +77,7 @@ CREATE TABLE [Employee] (
 
 	 [MiddleName] VARCHAR(255)  NULL,
 
-	 [Sex] VARCHAR(7)  NULL,
+	 [Sex] VARCHAR(6)  NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 

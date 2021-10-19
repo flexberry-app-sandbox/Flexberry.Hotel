@@ -71,7 +71,7 @@ CREATE TABLE "Person"
 
 	"FullName" NVARCHAR2(255) NULL,
 
-	"Sex" NVARCHAR2(7) NULL,
+	"Sex" NVARCHAR2(6) NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -88,7 +88,7 @@ CREATE TABLE "Employee"
 
 	"MiddleName" NVARCHAR2(255) NULL,
 
-	"Sex" NVARCHAR2(7) NULL,
+	"Sex" NVARCHAR2(6) NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;

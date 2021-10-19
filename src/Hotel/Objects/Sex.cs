@@ -12,6 +12,7 @@ namespace IIS.Hotel
 {
     using System;
     using System.Xml;
+    using ICSSoft.STORMNET;
     
     
     // *** Start programmer edit section *** (Using statements)
@@ -31,16 +32,19 @@ namespace IIS.Hotel
         // *** Start programmer edit section *** (Sex.Male CustomAttributes)
 
         // *** End programmer edit section *** (Sex.Male CustomAttributes)
+        [Caption("Male")]
         Male,
         
         // *** Start programmer edit section *** (Sex.Female CustomAttributes)
 
         // *** End programmer edit section *** (Sex.Female CustomAttributes)
+        [Caption("Female")]
         Female,
         
         // *** Start programmer edit section *** (Sex.Unknown CustomAttributes)
 
         // *** End programmer edit section *** (Sex.Unknown CustomAttributes)
+        [Caption("")]
         Unknown,
     }
 }

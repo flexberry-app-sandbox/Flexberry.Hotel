@@ -2,8 +2,8 @@
   "nameSpace": "IIS.Hotel",
   "className": "Sex",
   "enumObjects": {
-    "Male": "",
-    "Female": "",
-    "Unknown": ""
+    "Male": "Male",
+    "Female": "Female",
+    "Unknown": "~"
   }
 }

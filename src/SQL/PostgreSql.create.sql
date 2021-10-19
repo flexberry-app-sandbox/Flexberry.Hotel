@@ -39,7 +39,7 @@ CREATE TABLE Room (
 CREATE TABLE Person (
  primaryKey UUID NOT NULL,
  FullName VARCHAR(255) NULL,
- Sex VARCHAR(7) NULL,
+ Sex VARCHAR(6) NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -48,7 +48,7 @@ CREATE TABLE Employee (
  FirstName VARCHAR(255) NULL,
  LastName VARCHAR(255) NULL,
  MiddleName VARCHAR(255) NULL,
- Sex VARCHAR(7) NULL,
+ Sex VARCHAR(6) NULL,
  PRIMARY KEY (primaryKey));
 
 

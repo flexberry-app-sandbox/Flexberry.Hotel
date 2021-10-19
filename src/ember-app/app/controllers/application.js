@@ -40,13 +40,13 @@ export default Controller.extend({
             link: 'i-i-s-hotel-hotel-l',
             caption: i18n.t('forms.application.sitemap.desktop.i-i-s-hotel-hotel-l.caption'),
             title: i18n.t('forms.application.sitemap.desktop.i-i-s-hotel-hotel-l.title'),
-            icon: 'building',
+            icon: 'suitcase',
             children: null
           }, {
             link: 'i-i-s-hotel-person-l',
             caption: i18n.t('forms.application.sitemap.desktop.i-i-s-hotel-person-l.caption'),
             title: i18n.t('forms.application.sitemap.desktop.i-i-s-hotel-person-l.title'),
-            icon: 'building',
+            icon: 'suitcase',
             children: null
           }]
         }

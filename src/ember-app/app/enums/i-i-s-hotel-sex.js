@@ -1,7 +1,7 @@
 import { createEnum } from 'ember-flexberry-data/utils/enum-functions';
 
 export default createEnum({
-  Male: '',
-  Female: '',
+  Male: 'Male',
+  Female: 'Female',
   Unknown: ''
 });
